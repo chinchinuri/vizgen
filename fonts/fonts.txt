@@ -1,0 +1,15 @@
+total 964
+-rw-r--r-- 1 urich urich 69316 May 19  2020 e-Ukraine-Bold.otf
+-rw-r--r-- 1 urich urich 76196 May 19  2020 e-Ukraine-Head-Bold.otf
+-rw-r--r-- 1 urich urich 77748 May 19  2020 e-Ukraine-Head-LOGO.otf
+-rw-r--r-- 1 urich urich 76652 May 19  2020 e-Ukraine-Head-Light.otf
+-rw-r--r-- 1 urich urich 77776 May 19  2020 e-Ukraine-Head-Medium.otf
+-rw-r--r-- 1 urich urich 78132 May 19  2020 e-Ukraine-Head-Regular.otf
+-rw-r--r-- 1 urich urich 77060 May 19  2020 e-Ukraine-Head-Thin.otf
+-rw-r--r-- 1 urich urich 77396 May 19  2020 e-Ukraine-Head-UltraLight.otf
+-rw-r--r-- 1 urich urich 69740 May 19  2020 e-Ukraine-Light.otf
+-rw-r--r-- 1 urich urich 71392 May 19  2020 e-Ukraine-Medium.otf
+-rw-r--r-- 1 urich urich 70420 May 19  2020 e-Ukraine-Regular.otf
+-rw-r--r-- 1 urich urich 70044 May 19  2020 e-Ukraine-Thin.otf
+-rw-r--r-- 1 urich urich 70316 May 19  2020 e-Ukraine-UltraLight.otf
+-rw-rw-r-- 1 urich urich     0 Feb 27 23:27 fonts.txt
