@@ -155,6 +155,7 @@
             /* visually scale down for screen — actual canvas is 300dpi print size */
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
@@ -210,6 +211,7 @@
     <div class="btn-group">
         <button class="btn-primary" id="downloadAll">⬇ Завантажити макети (UA + EN)</button>
         <button class="btn-secondary" id="downloadMask">⬇ Завантажити МАСКУ (для лаку)</button>
+        <button class="btn-primary" id="downloadPDF">⬇ Завантажити PDF (для друку)</button>
     </div>
 </div>
 
@@ -466,6 +468,42 @@ document.getElementById('downloadMask').addEventListener('click', () => {
         downloadPNG(canvasEN, 'MASK_VARNISH_EN.png');
         setTimeout(drawAll, 400);
     }, 400);
+});
+
+document.getElementById('downloadPDF').addEventListener('click', async () => {
+    // Імпортуємо jsPDF з глобального об'єкта
+    const { jsPDF } = window.jspdf;
+
+    // 1. Створюємо PDF документ
+    // Орієнтація: альбомна, одиниці: мм, формат: [ширина 94, висота 54] (з вильотами)
+    const pdf = new jsPDF({
+        orientation: 'landscape',
+        unit: 'mm',
+        format: [94, 54] 
+    });
+
+    // 2. Малюємо Українську сторону (щоб оновити дані)
+    drawCard(ctxUA, 'ua', false);
+    
+    // Додаємо зображення Canvas у PDF (0, 0 - координати, 94, 54 - розміри)
+    // Використовуємо 'PNG' або 'JPEG' (JPEG менше важить, PNG краще для тексту)
+    const imgDataUA = canvasUA.toDataURL('image/png', 1.0);
+    pdf.addImage(imgDataUA, 'PNG', 0, 0, 94, 54);
+
+    // 3. Додаємо нову сторінку для Англійської сторони
+    pdf.addPage([94, 54], 'landscape');
+    
+    // Малюємо Англійську сторону
+    drawCard(ctxEN, 'en', false);
+    const imgDataEN = canvasEN.toDataURL('image/png', 1.0);
+    pdf.addImage(imgDataEN, 'PNG', 0, 0, 94, 54);
+
+    // 4. Зберігаємо файл
+    const filename = `Vizytivka_${document.getElementById('uaSurname').value}.pdf`;
+    pdf.save(filename);
+    
+    // Повертаємо Canvas у попередній стан (малюємо обидва для прев'ю)
+    drawAll();
 });
 </script>
 </body>
