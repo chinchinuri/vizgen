@@ -245,7 +245,7 @@ const px = mm => BL + Math.round(mm * MM);
 // Зміни: Вгору на 2мм (4.74 - 2 = 2.74), Ліворуч на 1мм (5.08 - 1 = 4.08)
 const ICON_X  = px(4.08);   
 const ICON_Y  = px(2.74);   
-const ICON_SZ = Math.round(9.3  * MM); 
+const ICON_SZ = Math.round(9.1  * MM); 
 const ICON_SRC = 151;       
 
 // ── TEXT COLUMN ───────────────────────────────────────────────
@@ -255,14 +255,14 @@ const TEXT_MAX_W = W - TEXT_X - px(2);
 // ── ORG NAME (header) ─────────────────────────────────────────
 // Було: Y1=9.10mm, Y2=12.78mm. Шрифт 8pt.
 // Зміни: Вгору на 4мм (9.10 -> 5.10, 12.78 -> 8.78). Шрифт 7.5pt.
-const ORG_Y1 = px(5.20)  + Math.round(0.5 * MM);  
+const ORG_Y1 = px(5.60)  + Math.round(0.5 * MM);  
 const ORG_Y2 = px(8.98) + Math.round(0.5 * MM);  
 const FS_ORG = Math.round(7.5 * PT);              // 7.5pt
 
 // ── PERSONAL BLOCK ────────────────────────────────────────────
 // Було: Surname bottom=22.69mm
 // Зміни: Прізвище вгору на 1мм (22.69 - 1 = 21.69)
-const SURNAME_Y  = px(21.69);  
+const SURNAME_Y  = px(21.89);  
 const NAME_Y     = px(25.06);  // Ім'я залишилось на місці (або теж треба підняти?)
 const POS_Y      = px(28.96);  // Посада залишилась на місці
 const FS_BOLD    = Math.round(7 * PT);  
