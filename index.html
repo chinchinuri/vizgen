@@ -245,7 +245,7 @@ const px = mm => BL + Math.round(mm * MM);
 // Зміни: Вгору на 2мм (4.74 - 2 = 2.74), Ліворуч на 1мм (5.08 - 1 = 4.08)
 const ICON_X  = px(4.08);   
 const ICON_Y  = px(2.74);   
-const ICON_SZ = Math.round(9.5  * MM); 
+const ICON_SZ = Math.round(9.3  * MM); 
 const ICON_SRC = 151;       
 
 // ── TEXT COLUMN ───────────────────────────────────────────────
@@ -255,8 +255,8 @@ const TEXT_MAX_W = W - TEXT_X - px(2);
 // ── ORG NAME (header) ─────────────────────────────────────────
 // Було: Y1=9.10mm, Y2=12.78mm. Шрифт 8pt.
 // Зміни: Вгору на 4мм (9.10 -> 5.10, 12.78 -> 8.78). Шрифт 7.5pt.
-const ORG_Y1 = px(5.10)  + Math.round(0.5 * MM);  
-const ORG_Y2 = px(8.78) + Math.round(0.5 * MM);  
+const ORG_Y1 = px(5.20)  + Math.round(0.5 * MM);  
+const ORG_Y2 = px(8.98) + Math.round(0.5 * MM);  
 const FS_ORG = Math.round(7.5 * PT);              // 7.5pt
 
 // ── PERSONAL BLOCK ────────────────────────────────────────────
@@ -269,12 +269,12 @@ const FS_BOLD    = Math.round(7 * PT);
 const FS_POS     = Math.round(6 * PT);
 
 // ── CONTACTS ──────────────────────────────────────────────────
-// Addr bottom=39.12mm, Phones=41.83mm, Email=45.04mm
-const ADDR_Y   = px(39.12);  // 486
-const PHONES_Y = px(41.83);  // 518
-const EMAIL_Y  = px(45.04);  // 556
-const FS_CONT  = Math.round(6 * PT);  // 25px
-const LH_CONT  = Math.round(2.88 * MM); // 34px (line spacing for contacts)
+// Addr bottom=39.12mm, Phones=42.53mm, Email=45.04mm
+const ADDR_Y   = px(39.12);  
+const PHONES_Y = px(42.33);  // Опустили на 0.7 мм (було 41.83)
+const EMAIL_Y  = px(45.34);  // Цей рядок залишається без змін
+const FS_CONT  = Math.round(6 * PT);  
+const LH_CONT  = Math.round(2.88 * MM);
 
 // ── ORG STRINGS ───────────────────────────────────────────────
 const ORG_UA = "Державна служба спеціального зв’язку";
