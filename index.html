@@ -159,8 +159,11 @@
 </head>
 <body>
 
-<!-- FONT LOADER: Примусове завантаження шрифтів для Canvas -->
-<div style="font-family: 'e-Ukraine-Head'; font-weight: 500; position: absolute; visibility: hidden; height: 0; overflow: hidden;">.</div>
+<!-- FONT LOADER -->
+<!-- Завантажуємо e-Ukraine (Medium 500) для Прізвища/Установи -->
+<div style="font-family: 'e-Ukraine'; font-weight: 500; position: absolute; visibility: hidden; height: 0; overflow: hidden;">.</div>
+
+<!-- Завантажуємо e-Ukraine (Thin 100) для Посади/Адреси -->
 <div style="font-family: 'e-Ukraine'; font-weight: 100; position: absolute; visibility: hidden; height: 0; overflow: hidden;">.</div>
 
 <div class="sidebar">
@@ -296,7 +299,7 @@ const ORG_EN2= "Information Protection of Ukraine";
 
 // ── FONT STACKS ───────────────────────────────────────────────
 // e-Ukraine-Medium ≈ bold weight, e-Ukraine-Thin ≈ light/regular
-const FH = "'e-Ukraine-Head', 'e-Ukraine'";
+const FH = "'e-Ukraine'"; 
 const FB = "'e-Ukraine'";  // weight set per draw call
 
 const imgHeaderUA = new Image();
